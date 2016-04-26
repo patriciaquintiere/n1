@@ -8,8 +8,11 @@ $(document).ready(function() {
     speed: 900,
     autoplay: true
   });
-  // // toggle class - bg banner
-  // $('.single-item-banner').on('afterChange', function(event, slick, currentSlide){
-  //   $('.banners').attr('class','banners currentSlide'+currentSlide);
-  // });
+  var value = window.devicePixelRatio;
+  var w = window.innerWidth;
+  var lWidth = window.screen.width;
+  console.log(value);
+  console.log(w);
+  console.log(lWidth);
+
 });

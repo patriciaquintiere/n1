@@ -1,15 +1,4 @@
-/*
-* session save itens cart
-*/
-// function saveItems(idProduct) {
-//   var saveProducts = '';
-//   saveProducts += ' idProduct=' + idProduct + '/';
-//   document.cookie += saveProducts;
-// }
-
-/*
-* get products
-*/
+// get products
 function viewProducts(){
   $.ajax({
     url: "../data.json",
@@ -20,6 +9,8 @@ function viewProducts(){
         var contentProduct = '';
         // init block product
         contentProduct += '<div class="block product">\n';
+        // link product
+        contentProduct += '<a href="'+product.productUrl+'">';
         // product url image
         contentProduct += ' <img '+'src="' + product.productImagerl + '" alt="Foto '+product.productName+'" />\n';
         // product info
@@ -27,7 +18,7 @@ function viewProducts(){
         // product name
         contentProduct += '   <span class="name">' + product.productName + '</span>';
         // product especification
-        contentProduct += '   <span class="escecification">' + product.productEspecification + '</span>';
+        contentProduct += '   <span class="especification">' + product.productEspecification + '</span>';
         // product description
         contentProduct += ' </p>\n';
         // product price tag
@@ -38,6 +29,8 @@ function viewProducts(){
         contentProduct += ' <span class="current-price">'+formatProductPrice+'</span>';
         // end block price
         contentProduct += ' </div>';
+        // end block link product
+        contentProduct += '</a>';
         // end block product
         contentProduct += '</div>';
 

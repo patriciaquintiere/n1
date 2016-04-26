@@ -2,7 +2,7 @@
 * @section CONTAINER GRID
 */
 .container{
-  padding: 0 20px;
+  padding: 0 10px;
   width: 100%;
 }
 .content{
@@ -31,15 +31,21 @@
   min-height: 1px;
   padding: 0 10px;
   position: relative;
-  width: 30.61224489795918%;
+  width: 300px;
 }
 
 
 // for mobile
 @media (max-device-width: 900px){
-  .block.full{
+  .block{
     display: block !important;
     float: none !important;
+    margin: 0 !important;
     width: 100% !important;
+  }
+}
+@media (min-device-width: 901px) and (max-device-width: 979px){
+  .block{
+    width: 30.61224489795918%;
   }
 }

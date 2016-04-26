@@ -3,7 +3,7 @@ module.exports = function (grunt) {
     // Watch task config
     watch: {
       sass: {
-        files: "app/scss/*.scss",
+        files: ["app/scss/*.scss","app/scss/**/*.scss"],
         tasks: ['sass']
       }
     },
@@ -48,6 +48,16 @@ module.exports = function (grunt) {
             dest:'dist/images/'
           }
         ]
+      },
+      fonts: {
+        files: [
+          {
+            expand: true,
+            cwd: 'app/fonts/',
+            src: ['**/*.{eot,svg,ttf,woff, woff2}'],
+            dest:'dist/fonts/'
+          }
+        ]
       }
     },
     useminPrepare: {
@@ -61,15 +71,19 @@ module.exports = function (grunt) {
       options: {
         dirs: ['css', 'js', 'images']
       }
-    },
+    }
 
   });
-  grunt.loadNpmTasks('grunt-contrib-clean');
-  grunt.loadNpmTasks('grunt-contrib-copy');
-  grunt.loadNpmTasks('grunt-usemin');
+
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-browser-sync');
+  grunt.loadNpmTasks('grunt-contrib-clean');
+  grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-usemin');
+  grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
 
   // copy img, css, js and minified css and js
   grunt.registerTask('build',[

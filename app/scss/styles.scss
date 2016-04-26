@@ -8,7 +8,6 @@
 @import 'imports/variables';
 // mixins
 @import 'mixins/mixins';
-
 /**
 * @section DEFAULT
 */
@@ -21,6 +20,9 @@ ul{list-style: none;}
 * @section HEADER
 */
 header{
+  position: relative;
+  z-index: 5;
+
   &:after {
     display: table;
     content: " ";
@@ -143,13 +145,11 @@ header{
 * @section SECTION
 */
 section{
+  background: $gray-darken;
   /** @subsection BANNER */
   .banners{
     transition: all 0.8s ease-in-out;
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-color: #000;
+
     margin-bottom: 50px;
 
     .slick-slide{
@@ -233,14 +233,79 @@ section{
   }
   /** @subsection RECOMMENDATIONS CATEGORIES and PRODUCTS */
   &.recommendations{
-    .destaques{
+      h2{
+        font-size: 22px;
+        font-weight: normal;
+        text-align: center;
+        font-family: 'open_sansregular';
+        text-transform: uppercase;
 
+        &:after{
+          background: $gray;
+          content: '';
+          display: block;
+          height: 10px;
+          margin: 0 auto;
+          width: 50px;
+        }
+      }
+    .block.product{
+      background: $white;
+      padding: 10px 10px;
+
+      &:hover{
+        -webkit-animation: shadowFade 0.6s;
+        box-shadow: 0 0 10px #aaa;
+      }
+      &:nth-child(2){
+        margin: 0 40px;
+      }
+      img{
+        max-width: 300px;
+        margin: 0 auto;
+        width: 100%;
+      }
+      .info-product,
+      .price{
+        display: inline-block;
+        margin: 10px 0;
+        vertical-align: middle;
+
+        span{font-family: 'open_sanssemibold', sans-serif;}
+      }
+      .info-product{
+        min-height: 40px;
+        width: calc(100% - 80px);
+
+        span{
+          display: block;
+          line-height: 20px;
+        }
+        span.name{
+          color: $black;
+          font-size: 18px;
+          line-height: 20px;
+        }
+        span.especification{
+          color: $gray-light;
+          font-size: 12px;
+        }
+      }
+      .price{
+        text-align: right;
+        width: 75px;
+
+        span:first-of-type{
+          color: $black;
+          font-size: 12px;
+        }
+        span.current-price{
+          color: $green;
+        }
+      }
     }
-    /** @subsection PRODUCTS */
-
-    .block{vertical-align: top;}
     .container-products{
-      margin-top: 30px;
+      margin: 30px 0 90px;
 
       &:after {
         display: table;
@@ -248,16 +313,7 @@ section{
         clear: both;
       }
     }
-    .products{
-      h2{
-        border-bottom: 1px solid $gray;
-        font-size: 44px;
-        font-weight: 300;
-        padding-top: 40px;
-        margin-left: 10px;
-      }
 
-    }
   }
 }
 

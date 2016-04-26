@@ -18,9 +18,22 @@
   }
 }
 @media (max-device-width: 900px){
-  img{border-radius: 25px;}
-  .banner-sale{
-    width: calc(100% - 40px;)
+  // for mobile
+  section.recommendations .block.product{
+    display: block !important;
+    float: none !important;
+    margin: 0 !important;
+    width: 100% !important;
+
+    img {
+      width: 50%;
+      border-radius: 25px;
+    }
+    .info-product,
+    .price{
+      float: right;
+      width: 50%;
+    }
   }
 }
 @media (max-device-width: 1023px){
