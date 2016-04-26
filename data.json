@@ -5,7 +5,7 @@
 	"productEspecification" : "incorporado",
 	"productPrice"  : "3700",
 	"productUrl"  : "/#",
-	"productImagerl"  : "/images/products/iori.jpg"
+	"productImagerl"  : "images/products/iori.jpg"
 
 },
 {
@@ -14,7 +14,7 @@
 	"productEspecification" : "com especial",
 	"productPrice"  : "2700",
 	"productUrl"  : "/#",
-	"productImagerl"  : "/images/products/street.jpg"
+	"productImagerl"  : "images/products/street.jpg"
 
 },
 {
@@ -23,7 +23,7 @@
 	"productEspecification" : "corra dos fantasmas",
 	"productPrice"  : "4700",
 	"productUrl"  : "/#",
-	"productImagerl"  : "/images/products/pacman.jpg"
+	"productImagerl"  : "images/products/pacman.jpg"
 
 }
 ]
