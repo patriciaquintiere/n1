@@ -1,0 +1,45 @@
+/**
+* @section CONTAINER GRID
+*/
+.container{
+  padding: 0 20px;
+  width: 100%;
+}
+.content{
+  min-height: 1px;
+  margin: 0 -10px;
+
+  &:after {
+    display: table;
+    content: " ";
+    clear: both;
+  }
+}
+@media (min-width: 980px){
+  .container{
+    margin: 0 auto;
+    width: 980px;
+  }
+}
+
+/**
+* @section COLUMNS
+*/
+.block{
+  float: left;
+  box-sizing: border-box;
+  min-height: 1px;
+  padding: 0 10px;
+  position: relative;
+  width: 30.61224489795918%;
+}
+
+
+// for mobile
+@media (max-device-width: 900px){
+  .block.full{
+    display: block !important;
+    float: none !important;
+    width: 100% !important;
+  }
+}
