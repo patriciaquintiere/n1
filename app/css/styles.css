@@ -261,7 +261,7 @@ textarea,
   position: relative;
   width: 300px; }
 
-@media (max-width: 900px) {
+@media (max-device-width: 900px) {
   .block {
     display: block !important;
     float: none !important;
@@ -339,12 +339,8 @@ header {
       text-transform: uppercase;
       width: 86px; }
   header #botao-mobile {
-    background: url("../image/backgrounds/icon-menu.svg") center center no-repeat #40c3db;
     display: none;
-    cursor: pointer;
-    height: 50px;
     position: absolute;
-    width: 50px;
     z-index: 1;
     text-indent: -9999px; }
   header #menu-active {
@@ -443,8 +439,8 @@ section {
           box-shadow: 0 0 5px #000; }
         section .banners .slick-slider .slick-slide:focus {
           outline: transparent; }
-      section .banners .slick-slider .slick-list {
-        z-index: 4; }
+      section .banners .slick-slider .slick-arrow {
+        z-index: 6; }
       section .banners .slick-slider .slick-prev.slick-arrow {
         background-image: url("../image/backgrounds/button-left.png");
         left: -75px; }
@@ -506,8 +502,7 @@ section {
         min-height: 40px;
         width: calc(100% - 80px); }
         section.recommendations .block.product .info-product span {
-          display: block;
-          line-height: 20px; }
+          display: block; }
         section.recommendations .block.product .info-product span.name {
           color: #000;
           font-size: 18px;
@@ -533,45 +528,38 @@ section {
 /**
 * @section RESPONSIVE
 */
-@media (max-device-width: 768px) {
-  header .menu ul li a {
-    font-size: 30px; }
-
-  section.recommendations .products .product {
-    height: auto; }
-
-  section.recommendations .products .product .rating {
-    height: 70px;
-    width: 300px; }
-
-  section.recommendations .products .product span,
-  section.recommendations .products .product p,
-  section.recommendations .products .product button {
-    font-size: 40px; } }
-@media (min-device-width: 768px) and (max-device-width: 1023px) {
-  img {
-    max-width: 400px; } }
-@media (max-device-width: 900px) {
-  section.recommendations .block.product {
-    display: block !important;
-    float: none !important;
-    margin: 0 !important;
-    width: 100% !important; } }
+@media (min-device-pixel-ratio: 1.25) and (max-device-width: 980px), (-webkit-min-device-pixel-ratio: 1.25) and (max-device-width: 980px), (min--moz-device-pixel-ratio: 1.25) and (max-device-width: 980px), (-o-min-device-pixel-ratio: 1.25) and (max-device-width: 980px) {
+  h2, span, a, p, button {
+    font-size: 40px !important; } }
 @media (max-device-width: 979px) {
   header {
-    position: relative; }
+    height: 120px;
+    position: relative;
+    z-index: 99999; }
     header .brand {
-      margin-left: 70px;
-      width: 80px; }
+      display: block;
+      margin: 0 auto;
+      width: 150px; }
+      header .brand .logo {
+        padding: 15px 0; }
+        header .brand .logo img {
+          height: auto;
+          width: 130px; }
     header .search {
-      float: right; }
+      display: none; }
     header #botao-mobile {
+      cursor: pointer;
       display: block !important;
       top: 0;
       left: 0;
-      height: 61px;
+      height: 120px;
       padding: 10px;
-      width: 60px; }
+      width: 120px;
+      background-image: url("../image/backgrounds/icon-menu.svg");
+      background-color: #40c3db;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 70px 70px; }
     header #menu-active[type="checkbox"]:checked + .menu {
       display: block; }
     header #menu-active[type="checkbox"]:not(:checked) + .menu {
@@ -579,24 +567,67 @@ section {
     header nav.menu {
       background: #40c3db;
       position: absolute;
-      left: 0; }
+      left: 0;
+      width: auto; }
       header nav.menu > ul {
         opacity: 1;
-        visibility: visible; } }
-@media (max-width: 1130px) {
+        visibility: visible; }
+        header nav.menu > ul li {
+          height: 120px;
+          line-height: 120px; }
+          header nav.menu > ul li > ul {
+            height: 467px !important; }
+            header nav.menu > ul li > ul li {
+              height: 90px;
+              line-height: 90px; }
+
+  section.recommendations {
+    margin-top: 40px; }
+    section.recommendations .destaques {
+      padding-bottom: 40px; }
+    section.recommendations .block.product {
+      display: block !important;
+      float: none !important;
+      margin: 10px 0 !important;
+      position: relative;
+      width: 100% !important; }
+      section.recommendations .block.product:after {
+        display: table;
+        content: " ";
+        clear: both; }
+      section.recommendations .block.product img,
+      section.recommendations .block.product .price,
+      section.recommendations .block.product .info-product {
+        width: 30% !important; }
+      section.recommendations .block.product .info-product {
+        padding: 0 20px; }
+        section.recommendations .block.product .info-product span.name {
+          line-height: 62px; }
+        section.recommendations .block.product .info-product span.especification {
+          line-height: 40px; }
+      section.recommendations .block.product img,
+      section.recommendations .block.product .info-product {
+        float: left; }
+      section.recommendations .block.product .price {
+        bottom: 10px;
+        font-size: 46px;
+        padding: 0 30px;
+        position: absolute;
+        right: 10px; } }
+@media (max-device-width: 1130px) {
   section .banners .slick-slider .slick-arrow {
     background-color: rgba(255, 255, 255, 0.5);
     border: 10px solid transparent;
     border-radius: 5px;
     padding: 5px;
-    height: 70px;
-    width: 50px; }
+    height: 90px;
+    width: 70px; }
   section .banners .slick-slider .slick-next.slick-arrow {
     right: 15px !important; }
   section .banners .slick-slider .slick-prev.slick-arrow {
     left: 15px !important; } }
-@media (max-device-width: 1023px) {
-  section .categories .category {
-    text-align: center !important; } }
+@media (max-device-width: 768px) {
+  header nav.menu {
+    width: 100%; } }
 
 /*# sourceMappingURL=styles.css.map */

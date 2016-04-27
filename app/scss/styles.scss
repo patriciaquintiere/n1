@@ -67,12 +67,8 @@ header{
     }
   }
   #botao-mobile{
-    background: url("../image/backgrounds/icon-menu.svg") center center no-repeat $blue;
     display: none;
-    cursor: pointer;
-    height: 50px;
     position: absolute;
-    width: 50px;
     z-index: 1;
     text-indent: -9999px;
   }
@@ -199,7 +195,7 @@ section{
         }
         &:focus{outline: transparent;}
       }
-      .slick-list{z-index: 4;}
+      .slick-arrow{z-index: 6;}
       .slick-prev.slick-arrow{
         background-image: url("../image/backgrounds/button-left.png");
         left: -75px;
@@ -276,7 +272,6 @@ section{
 
         span{
           display: block;
-          line-height: 20px;
         }
         span.name{
           color: $black;

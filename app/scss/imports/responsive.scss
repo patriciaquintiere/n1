@@ -1,48 +1,47 @@
 /**
 * @section RESPONSIVE
 */
-@media (max-device-width: 768px){
-  header .menu ul li a{font-size: 30px;}
-  section.recommendations .products .product{height: auto;}
-  section.recommendations .products .product .rating{
-    height: 70px;
-    width: 300px;
-  }
-  section.recommendations .products .product span,
-  section.recommendations .products .product p,
-  section.recommendations .products .product button{font-size: 40px;}
-}
-@media (min-device-width: 768px) and (max-device-width: 1023px) {
-  img{
-    max-width: 400px;
-  }
-}
-@media (max-device-width: 900px){
-  // for mobile
-  section.recommendations .block.product{
-    display: block !important;
-    float: none !important;
-    margin: 0 !important;
-    width: 100% !important;
-  }
+@media (min-device-pixel-ratio: 1.25) and (max-device-width: 980px),
+(-webkit-min-device-pixel-ratio: 1.25) and (max-device-width: 980px),
+(min--moz-device-pixel-ratio: 1.25) and (max-device-width: 980px),
+(-o-min-device-pixel-ratio: 1.25) and (max-device-width: 980px){
+  h2, span, a, p, button{font-size: 40px !important;}
 }
 @media (max-device-width: 979px){
   header{
+    height: 120px;
     position: relative;
+    z-index: 99999;
+
     .brand{
-      margin-left: 70px;
-      width: 80px;
+      display: block;
+      margin: 0 auto;
+      width: 150px;
+      .logo{
+        padding: 15px 0;
+        img{
+          height: auto;
+          width: 130px;
+        }
+      }
+
     }
     .search{
-      float: right;
+      display: none;
     }
     #botao-mobile{
+      cursor: pointer;
       display: block !important;
       top: 0;
       left: 0;
-      height: 61px;
+      height: 120px;
       padding: 10px;
-      width: 60px;
+      width: 120px;
+      background-image: url("../image/backgrounds/icon-menu.svg");
+      background-color: $blue;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 70px 70px;
     }
     #menu-active[type="checkbox"]:checked + .menu{display: block;}
     #menu-active[type="checkbox"]:not(:checked) + .menu{display: none;}
@@ -51,34 +50,92 @@
       background: $blue;
       position: absolute;
       left: 0;
+      width: auto;
 
       > ul {
         opacity: 1;
         visibility: visible;
+
+        li{
+          height: 120px;
+          line-height: 120px;
+
+          > ul{
+            height: 467px !important;
+
+            li{
+              height: 90px;
+              line-height: 90px;
+            }
+          }
+        }
+      }
+    }
+  }
+  // for mobile
+  section.recommendations{
+    margin-top: 40px;
+
+    .destaques {
+      padding-bottom: 40px;
+    }
+    .block.product{
+      display: block !important;
+      float: none !important;
+      margin: 10px 0 !important;
+      position: relative;
+      width: 100% !important;
+
+      &:after {
+        display: table;
+        content: " ";
+        clear: both;
+      }
+
+      img,
+      .price,
+      .info-product{
+        width: 30% !important;
+      }
+      .info-product{
+        padding: 0 20px;
+        span{
+          &.name{line-height: 62px;}
+          &.especification{line-height: 40px;}
+        }
+      }
+      img,
+      .info-product{
+        float:left;
+      }
+      .price{
+        bottom: 10px;
+        font-size: 46px;
+        padding: 0 30px;
+        position: absolute;
+        right: 10px;
       }
     }
   }
 }
-@media (max-width: 1130px){
+@media (max-device-width: 1130px){
   section .banners .slick-slider{
     .slick-arrow{
       background-color: rgba($white, 0.5);
       border: 10px solid transparent;
       border-radius: 5px;
       padding: 5px;
-      height: 70px;
-      width: 50px;
+      height: 90px;
+      width: 70px;
     }
     .slick-next.slick-arrow{right: 15px !important;}
     .slick-prev.slick-arrow{left: 15px !important;}
   }
 }
-@media (max-device-width: 1023px){
-  section{
-    .categories{
-      .category{
-        text-align: center !important;
-      }
+@media (max-device-width: 768px){
+  header{
+    nav.menu{
+      width: 100%;
     }
   }
 }
