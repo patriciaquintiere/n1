@@ -585,7 +585,7 @@ textarea,
   position: relative;
   width: 300px; }
 
-@media (max-device-width: 900px) {
+@media (max-width: 900px) {
   .block {
     display: block !important;
     float: none !important;
@@ -629,7 +629,8 @@ body {
 header {
   background: #fff;
   position: relative;
-  z-index: 5; }
+  z-index: 5;
+  min-height: 60px; }
   header:after {
     display: table;
     content: " ";
@@ -637,6 +638,8 @@ header {
   header .container > * {
     display: inline-block;
     vertical-align: middle; }
+  header .brand, header .search {
+    margin: 15px 0; }
   header .brand {
     width: 290px; }
     header .brand .logo img {
@@ -659,6 +662,23 @@ header {
       height: 30px;
       text-transform: uppercase;
       width: 86px; }
+  header #botao-mobile {
+    background: url("../image/backgrounds/icon-menu.svg") center center no-repeat #40c3db;
+    display: none;
+    cursor: pointer;
+    height: 50px;
+    position: absolute;
+    width: 50px;
+    z-index: 1;
+    text-indent: -9999px; }
+  header #menu-active {
+    top: 0;
+    right: 0;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    z-index: 0;
+    text-indent: -9999px; }
   header .menu {
     width: 290px; }
     header .menu ul {
@@ -758,7 +778,7 @@ section {
       section .banners .slick-slider .slick-arrow {
         background-position: center center;
         background-repeat: no-repeat;
-        background-size: cover;
+        background-size: 29px 50px;
         height: 50px;
         width: 29px;
         z-index: 5; }
@@ -861,6 +881,44 @@ section {
     float: none !important;
     margin: 0 !important;
     width: 100% !important; } }
+@media (max-device-width: 979px) {
+  header {
+    position: relative; }
+    header .brand {
+      margin-left: 70px;
+      width: 80px; }
+    header .search {
+      float: right; }
+    header #botao-mobile {
+      display: block !important;
+      top: 0;
+      left: 0;
+      height: 61px;
+      padding: 10px;
+      width: 60px; }
+    header #menu-active[type="checkbox"]:checked + .menu {
+      display: block; }
+    header #menu-active[type="checkbox"]:not(:checked) + .menu {
+      display: none; }
+    header nav.menu {
+      background: #40c3db;
+      position: absolute;
+      left: 0; }
+      header nav.menu > ul {
+        opacity: 1;
+        visibility: visible; } }
+@media (max-width: 1130px) {
+  section .banners .slick-slider .slick-arrow {
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 10px solid transparent;
+    border-radius: 5px;
+    padding: 5px;
+    height: 70px;
+    width: 50px; }
+  section .banners .slick-slider .slick-next.slick-arrow {
+    right: 15px !important; }
+  section .banners .slick-slider .slick-prev.slick-arrow {
+    left: 15px !important; } }
 @media (max-device-width: 1023px) {
   section .categories .category {
     text-align: center !important; } }
