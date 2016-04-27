@@ -4,7 +4,6 @@ $(document).ready(function() {
 
   // slider slick slider
   $('.single-item-banner').slick({
-    dots: true,
     speed: 900,
     autoplay: true
   });

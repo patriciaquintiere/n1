@@ -43,9 +43,9 @@ module.exports = function (grunt) {
         files: [
           {
             expand: true,
-            cwd: 'app/images/',
+            cwd: 'app/image/',
             src: ['**/*.{png,jpg,svg}'],
-            dest:'dist/images/'
+            dest:'dist/image/'
           }
         ]
       },
@@ -69,7 +69,7 @@ module.exports = function (grunt) {
     usemin: {
       html: 'dist/index.html',
       options: {
-        dirs: ['css', 'js', 'images']
+        dirs: ['css', 'js', 'image']
       }
     }
 

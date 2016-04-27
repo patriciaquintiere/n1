@@ -12,7 +12,7 @@ function viewProducts(){
         // link product
         contentProduct += '<a href="'+product.productUrl+'">';
         // product url image
-        contentProduct += ' <img '+'src="' + product.productImagerl + '" alt="Foto '+product.productName+'" />\n';
+        contentProduct += ' <img '+'src="/' + product.productImagerl + '" alt="Foto '+product.productName+'" />\n';
         // product info
         contentProduct += ' <p class="info-product">\n';
         // product name

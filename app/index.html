@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Agência N1</title>
-  <link rel="shortcut icon" href="/images/favicon.ico">
+  <link rel="shortcut icon" href="/image/favicon.ico">
   <!--build:css css/styles.min.css -->
   <link rel="stylesheet" type="text/css" href="../node_modules/slick-carousel/slick/slick.css">
   <link rel="stylesheet" type="text/css" href="../node_modules/slick-carousel/slick/slick-theme.css">
@@ -24,7 +24,7 @@
       <div class="brand">
         <h1 class="logo">
           <a href="/">
-            <img src="/images/backgrounds/logo-agencia-n1.jpg" alt="Logo Agência N1" />
+            <img src="/image/backgrounds/logo-agencia-n1.jpg" alt="Logo Agência N1" />
           </a>
         </h1>
       </div>
@@ -36,6 +36,8 @@
         </div>
       </div>
       <!-- menu -->
+      <label id="botao-mobile" for="menu-active"><span>menu</span></label>
+      <input type="checkbox" id="menu-active" />
       <nav class="menu">
         <ul>
           <!-- menu 1 -->
@@ -162,8 +164,6 @@
               </li>
             </ul>
           </li>
-
-
         </ul>
       </nav>
     </div>
@@ -175,29 +175,27 @@
           <!-- banner 1 -->
           <div class="single-item-banner">
             <div class="content-banner-1">
-                <div class="banner item-1">
-                  <p><span>Coleção</span>
-                    Lorem Ipsum Dolor 1
-                    <span><a href="#">Conferir</a></span>
-                  </p>
+                <!-- coluna left -->
+                <div class="col left">
+                  <img src="/image/shaokahn.png" alt="Foto Shao Kahn" />
+                </div>
+                <!-- coluna left -->
+                <div class="col right">
+                  <img src="/image/scorpion.png" alt="Foto Scorpion" />
+                  <img src="/image/subzero.png" alt="Foto Subzero" />
                 </div>
             </div>
             <!-- banner 2 -->
             <div class="content-banner-2">
                 <div class="banner item-2">
-                  <p><span>Coleção</span>
-                    Lorem Ipsum Dolor 2
-                    <span><a href="#">Conferir</a></span>
-                  </p>
-                </div>
-            </div>
-            <!-- banner 3 -->
-            <div class="content-banner-3">
-                <div class="banner item-4">
-                  <p><span>Coleção</span>
-                    Lorem Ipsum Dolor 3
-                    <span><a href="#">Conferir</a></span>
-                  </p>
+                  <!-- coluna left -->
+                  <div class="col left">
+                    <img src="/image/predador.png" alt="Foto Predador" />
+                  </div>
+                  <!-- coluna left -->
+                  <div class="col right">
+                    <img src="/image/jason.png" alt="Foto Jason" />
+                  </div>
                 </div>
             </div>
           </div>
@@ -214,20 +212,20 @@
           <h2>Produtos em Destaque</h2>
           <div class="container-products">
             <div class="block product">
-              <a href="/#"> <img src="/images/products/ryu.jpg" alt="Foto Ryu">
+              <a href="/#"> <img src="/image/ryu.jpg" alt="Foto Ryu">
                 <p class="info-product">
                   <span class="name">Ryu</span>
-                  <span class="escecification">vem com hadouken</span> </p>
+                  <span class="especification">vem com hadouken</span> </p>
                   <div class="price">
                     <span>R$ </span> <span class="current-price">37,00</span>
                   </div>
                 </a>
               </div>
               <div class="block product">
-                <a href="/#"> <img src="/images/products/ken.jpg" alt="Foto Ken">
+                <a href="/#"> <img src="/image/ken.jpg" alt="Foto Ken">
                   <p class="info-product">
                     <span class="name">Ken</span>
-                    <span class="escecification">vem com shoryuken</span>
+                    <span class="especification">vem com shoryuken</span>
                   </p>
                   <div class="price">
                     <span>R$ </span> <span class="current-price">27,00</span>
@@ -235,7 +233,7 @@
                 </a>
               </div>
               <div class="block product">
-                <a href="/#"> <img src="/images/products/Akuma.jpg" alt="Foto Akuma">
+                <a href="/#"> <img src="/image/akuma.jpg" alt="Foto Akuma">
                   <p class="info-product">
                     <span class="name">Akuma</span>
                     <span class="especification">especial tela preta</span>

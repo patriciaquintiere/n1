@@ -24,16 +24,53 @@
     float: none !important;
     margin: 0 !important;
     width: 100% !important;
-
-    img {
-      width: 50%;
-      border-radius: 25px;
+  }
+}
+@media (max-device-width: 979px){
+  header{
+    position: relative;
+    .brand{
+      margin-left: 70px;
+      width: 80px;
     }
-    .info-product,
-    .price{
+    .search{
       float: right;
-      width: 50%;
     }
+    #botao-mobile{
+      display: block !important;
+      top: 0;
+      left: 0;
+      height: 61px;
+      padding: 10px;
+      width: 60px;
+    }
+    #menu-active[type="checkbox"]:checked + .menu{display: block;}
+    #menu-active[type="checkbox"]:not(:checked) + .menu{display: none;}
+
+    nav.menu{
+      background: $blue;
+      position: absolute;
+      left: 0;
+
+      > ul {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+}
+@media (max-width: 1130px){
+  section .banners .slick-slider{
+    .slick-arrow{
+      background-color: rgba($white, 0.5);
+      border: 10px solid transparent;
+      border-radius: 5px;
+      padding: 5px;
+      height: 70px;
+      width: 50px;
+    }
+    .slick-next.slick-arrow{right: 15px !important;}
+    .slick-prev.slick-arrow{left: 15px !important;}
   }
 }
 @media (max-device-width: 1023px){
